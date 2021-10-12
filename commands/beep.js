@@ -43,3 +43,5 @@ module.exports = {
         });
     },
 };
+
+// https://discordjs.guide/interactions/buttons.html#buttons

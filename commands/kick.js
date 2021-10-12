@@ -8,11 +8,18 @@ module.exports = {
             option.setName('target').setDescription('The member to kick')
         ),
     async execute(interaction) {
-        
         const user = interaction.options.getUser('target');
-        
+
+        if (!user) {
+            return interaction.reply({
+                content: 'You have to select a target to kick an user',
+                ephemeral: true,
+            });
+        }
+
+        // user.kick();
         return interaction.reply({
-            content: `You wanted to kick: ${user.username}`,
+            content: `You kicked: ${user.username}`,
             ephemeral: true,
         });
     },

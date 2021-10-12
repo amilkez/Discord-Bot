@@ -15,11 +15,15 @@ module.exports = {
             return interaction.reply(
                 `${user.username}'s avatar: ${user.displayAvatarURL({
                     dynamic: true,
+                    size: 4096,
+                    content: [],
                 })}`
             );
         return interaction.reply(
             `Your avatar: ${interaction.user.displayAvatarURL({
                 dynamic: true,
+                size: 4096,
+                content: [],
             })}`
         );
     },
